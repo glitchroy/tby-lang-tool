@@ -5,14 +5,14 @@ def load_json(path):
         data = json.load(f)
     return data
 
-def create_object_names(object_folder_path):
+def create_object_names(object_folder_path, file_ending, object_folder_name):
     object_names = {}
 
-    if (object_folder_path.endswith("objects") == False):
-        print("Please choose your project objects folder.")
+    if (object_folder_path.endswith(object_folder_name) == False):
+        print("Could not find object folder.")
     else:
         for dirpath, dirnames, filenames in os.walk(object_folder_path):
-            for filename in [f for f in filenames if f.endswith(".yy")]:
+            for filename in [f for f in filenames if f.endswith(file_ending)]:
                 full_path = os.path.join(dirpath, filename)
                 json_data = load_json(full_path)
                 object_names[json_data["id"]] = json_data["name"]
