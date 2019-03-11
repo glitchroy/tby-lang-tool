@@ -12,4 +12,4 @@ For now, please call `tby_generate_lang_file.py` on the command line, like this
 $ python tby_generate_lang_file.py
 ```
 
-You will be prompted to specify your project directory. The tool will scan the `\objects`-directory to build a list of object names and their unique identifiers and will then scan the `\room`-directory for every instance. It will output everything into a `lang.json` file.
+You will be prompted to specify your project directory. The tool will scan the `/objects`-directory to build a list of object names and their unique identifiers and will then scan the `/room`-directory for every instance. It will output everything into a `lang.json` file.
